@@ -94,6 +94,11 @@ public class Main {
     private static void registrarEntradaVeiculo(Scanner scanner, Estacionamento estacionamento) {
         System.out.println("=== REGISTRO DE ENTRADA ===");
         
+        System.out.print("Tipo de veículo (1-Carro / 2-Moto): ");
+        int tipoOpcao = scanner.nextInt();
+        scanner.nextLine(); // Limpa o buffer
+        String tipo = (tipoOpcao == 1) ? "Carro" : "Moto";
+        
         System.out.print("Digite a placa do veículo: ");
         String placa = scanner.nextLine().toUpperCase();
         
@@ -103,7 +108,7 @@ public class Main {
         System.out.print("Digite a cor do veículo: ");
         String cor = scanner.nextLine();
         
-        Veiculo veiculo = new Veiculo(placa, modelo, cor);
+        Veiculo veiculo = new Veiculo(placa, modelo, cor, tipo);
         estacionamento.registrarEntrada(veiculo);
     }
     
@@ -136,9 +141,9 @@ public class Main {
         
         // Teste 1: Registrar entradas
         System.out.println("--- TESTE 1: Registrando entradas de veículos ---");
-        Veiculo v1 = new Veiculo("ABC1234", "Fiat Uno", "Branco");
-        Veiculo v2 = new Veiculo("XYZ5678", "Honda Civic", "Preto");
-        Veiculo v3 = new Veiculo("DEF9012", "Toyota Corolla", "Prata");
+        Veiculo v1 = new Veiculo("ABC1234", "Fiat Uno", "Branco", "Carro");
+        Veiculo v2 = new Veiculo("XYZ5678", "Honda Civic", "Preto", "Carro");
+        Veiculo v3 = new Veiculo("DEF9012", "Honda CG 160", "Vermelha", "Moto");
         
         estacionamento.registrarEntrada(v1);
         System.out.println();

@@ -42,8 +42,9 @@ public class Estacionamento {
         Ticket ticket = new Ticket(contadorTickets++, veiculo, vagaDisponivel, horaEntrada);
         tickets.add(ticket);
 
-        System.out.println("✅ Entrada registrada com sucesso!");
+        System.out.println("\u2705 Entrada registrada com sucesso!");
         System.out.println("Ticket #" + ticket.getId());
+        System.out.println("Tipo: " + veiculo.getTipo());
         System.out.println("Veículo: " + veiculo.getPlaca());
         System.out.println("Vaga: " + vagaDisponivel.getNumero() + " (" + vagaDisponivel.getTipoVaga() + ")");
         System.out.println("Horário de entrada: " + horaEntrada);
@@ -71,8 +72,9 @@ public class Estacionamento {
         // Libera a vaga
         ticket.getVaga().setOcupada(false);
 
-        System.out.println("\n✅ Saída registrada com sucesso!");
+        System.out.println("\n\u2705 Saída registrada com sucesso!");
         System.out.println("Ticket #" + ticket.getId());
+        System.out.println("Tipo: " + ticket.getVeiculo().getTipo());
         System.out.println("Veículo: " + placa);
         System.out.println("Horário de entrada: " + ticket.getHoraEntrada());
         System.out.println("Horário de saída: " + horaSaida);
@@ -135,6 +137,7 @@ public class Estacionamento {
             if (ticket.isAtivo()) {
                 temVeiculos = true;
                 System.out.println("\nTicket #" + ticket.getId());
+                System.out.println("Tipo: " + ticket.getVeiculo().getTipo());
                 System.out.println("Placa: " + ticket.getVeiculo().getPlaca());
                 System.out.println("Modelo: " + ticket.getVeiculo().getModelo());
                 System.out.println("Vaga: " + ticket.getVaga().getNumero());

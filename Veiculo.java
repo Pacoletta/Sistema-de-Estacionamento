@@ -3,12 +3,14 @@ public class Veiculo {
     private String modelo;
     private String cor;
     private String tipo; // "Carro" ou "Moto"
+    private String perfilCondutor; // "comum", "idoso" ou "deficiente"
 
-    public Veiculo(String placa, String modelo, String cor, String tipo) {
+    public Veiculo(String placa, String modelo, String cor, String tipo, String perfilCondutor) {
         this.placa = placa;
         this.modelo = modelo;
         this.cor = cor;
         this.tipo = tipo;
+        this.perfilCondutor = perfilCondutor;
     }
 
     public String getPlaca() {
@@ -43,6 +45,14 @@ public class Veiculo {
         this.tipo = tipo;
     }
 
+    public String getPerfilCondutor() {
+        return perfilCondutor;
+    }
+
+    public void setPerfilCondutor(String perfilCondutor) {
+        this.perfilCondutor = perfilCondutor;
+    }
+
     @Override
     public String toString() {
         return "Veículo{" +
@@ -50,6 +60,7 @@ public class Veiculo {
                 ", placa='" + placa + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", cor='" + cor + '\'' +
+                ", perfil='" + perfilCondutor + '\'' +
                 '}';
     }
 }

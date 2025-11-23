@@ -45,8 +45,8 @@ public class Estacionamento {
         if (vagaDisponivel == null) {
             // Estacionamento lotado - adiciona na fila de espera
             filaEspera.add(veiculo);
-            System.out.println("⚠️ Estacionamento lotado! Não há vagas disponíveis.");
-            System.out.println("📋 Veículo " + veiculo.getPlaca() + " adicionado à fila de espera.");
+            System.out.println(" Estacionamento lotado! Não há vagas disponíveis.");
+            System.out.println(" Veículo " + veiculo.getPlaca() + " adicionado à fila de espera.");
             System.out.println("Posição na fila: " + filaEspera.size());
             return null;
         }
@@ -75,8 +75,8 @@ public class Estacionamento {
         if (vagaDisponivel == null) {
             // Estacionamento lotado - adiciona na fila de espera
             filaEspera.add(veiculo);
-            System.out.println("⚠️ Estacionamento lotado! Não há vagas disponíveis.");
-            System.out.println("📋 Veículo " + veiculo.getPlaca() + " adicionado à fila de espera.");
+            System.out.println(" Estacionamento lotado! Não há vagas disponíveis.");
+            System.out.println(" Veículo " + veiculo.getPlaca() + " adicionado à fila de espera.");
             System.out.println("Posição na fila: " + filaEspera.size());
             return null;
         }
@@ -133,7 +133,7 @@ public class Estacionamento {
         
         // Processa fila de espera - entrada automática do próximo da fila
         if (!filaEspera.isEmpty()) {
-            System.out.println("\n🔄 Processando fila de espera...");
+            System.out.println("\n Processando fila de espera...");
             Veiculo proximoVeiculo = filaEspera.poll(); // Remove o primeiro da fila
             
             // Busca vaga adequada ao perfil do próximo veículo
@@ -145,7 +145,7 @@ public class Estacionamento {
                 Ticket novoTicket = new Ticket(contadorTickets++, proximoVeiculo, vagaParaProximo, horaEntradaFila);
                 tickets.add(novoTicket);
                 
-                System.out.println("✅ Veículo da fila entrou automaticamente!");
+                System.out.println("Veículo da fila entrou automaticamente!");
                 System.out.println("Ticket #" + novoTicket.getId());
                 System.out.println("Perfil: " + proximoVeiculo.getPerfilCondutor());
                 System.out.println("Tipo: " + proximoVeiculo.getTipo());
@@ -155,7 +155,7 @@ public class Estacionamento {
             } else {
                 // Se não houver vaga adequada, retorna veículo para a fila
                 filaEspera.add(proximoVeiculo);
-                System.out.println("⚠️ Nenhuma vaga adequada disponível. Veículo permanece na fila.");
+                System.out.println(" Nenhuma vaga adequada disponível. Veículo permanece na fila.");
             }
         }
     }
@@ -175,7 +175,7 @@ public class Estacionamento {
         if (!perfilCondutor.equalsIgnoreCase("comum")) {
             for (Vaga vaga : vagas) {
                 if (!vaga.isOcupada() && vaga.getTipoVaga().equalsIgnoreCase("comum")) {
-                    System.out.println("⚠️ Vagas preferenciais ocupadas. Alocando vaga comum.");
+                    System.out.println(" Vagas preferenciais ocupadas. Alocando vaga comum.");
                     return vaga;
                 }
             }
@@ -242,10 +242,10 @@ public class Estacionamento {
         }
         
         if (encontrado) {
-            System.out.println("⚠️ Veículo com placa " + placa + " já saiu do estacionamento.");
+            System.out.println("Veículo com placa " + placa + " já saiu do estacionamento.");
             System.out.println("Consulte o histórico completo para mais detalhes.");
         } else {
-            System.out.println("❌ Veículo com placa " + placa + " não encontrado.");
+            System.out.println("Veículo com placa " + placa + " não encontrado.");
         }
     }
 

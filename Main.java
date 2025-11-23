@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner kb = new Scanner(System.in);
         
         // Criação do estacionamento com 20 vagas e tarifa de R$ 5,00 por hora
         Estacionamento estacionamento = new Estacionamento("Estacionamento Central", 20, 5.00);
@@ -19,22 +19,22 @@ public class Main {
             exibirMenu();
             
             System.out.print("\nEscolha uma opção: ");
-            int opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpa o buffer
+            int opcao = kb.nextInt();
+            kb.nextLine(); // Limpa o buffer
             
             System.out.println();
             
             switch (opcao) {
                 case 1:
-                    registrarEntradaVeiculo(scanner, estacionamento);
+                    registrarEntradaVeiculo(kb, estacionamento);
                     break;
                     
                 case 2:
-                    registrarSaidaVeiculo(scanner, estacionamento);
+                    registrarSaidaVeiculo(kb, estacionamento);
                     break;
                     
                 case 3:
-                    pesquisarVeiculoPorPlaca(scanner, estacionamento);
+                    pesquisarVeiculoPorPlaca(kb, estacionamento);
                     break;
                     
                 case 4:
@@ -46,7 +46,7 @@ public class Main {
                     break;
                     
                 case 6:
-                    consultarPorTipo(scanner, estacionamento);
+                    consultarPorTipo(kb, estacionamento);
                     break;
                     
                 case 7:
@@ -80,11 +80,11 @@ public class Main {
             
             if (continuar) {
                 System.out.println("\nPressione ENTER para continuar...");
-                scanner.nextLine();
+                kb.nextLine();
             }
         }
         
-        scanner.close();
+        kb.close();
     }
     
     private static void exibirMenu() {
@@ -114,7 +114,7 @@ public class Main {
         System.out.println("  2 - Moto");
         System.out.print("Opção: ");
         int tipoOpcao = scanner.nextInt();
-        scanner.nextLine(); // Limpa o buffer
+        scanner.nextLine(); // Limpa o Scanner
         String tipo = (tipoOpcao == 1) ? "Carro" : "Moto";
         
         System.out.println("\nSelecione o perfil do condutor:");
@@ -123,7 +123,7 @@ public class Main {
         System.out.println("  3 - Deficiente (PCD)");
         System.out.print("Opção: ");
         int perfilOpcao = scanner.nextInt();
-        scanner.nextLine(); // Limpa o buffer
+        scanner.nextLine(); // Limpa o Scanner
         String perfilCondutor;
         if (perfilOpcao == 2) {
             perfilCondutor = "idoso";
@@ -155,7 +155,7 @@ public class Main {
         Veiculo veiculo = new Veiculo(placa, modelo, cor, tipo, perfilCondutor);
         
         if (horaOpcao == 2) {
-            // Entrada com data manual + hora atual
+            // Entrada com data manual e hora atual
             System.out.println("\n--- Informe a DATA de entrada ---");
             System.out.print("Digite o ano: ");
             int ano = scanner.nextInt();
@@ -165,7 +165,7 @@ public class Main {
             int dia = scanner.nextInt();
             scanner.nextLine();
             
-            // Pega hora e minuto atuais
+            // Pega horario atual
             java.time.LocalTime horaAtual = java.time.LocalTime.now();
             int hora = horaAtual.getHour();
             int minuto = horaAtual.getMinute();

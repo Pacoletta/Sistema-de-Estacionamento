@@ -29,15 +29,67 @@ Sistema completo em Java para gerenciamento de estacionamento com controle de en
   - `ChronoUnit` - Cálculo de diferenças de tempo
   - `Math.ceil()` - Arredondamento de horas para cima
 
+## 📥 Como Baixar e Instalar no Seu PC
+
+### Pré-requisitos
+
+- **Java JDK 8 ou superior** instalado
+  - Verifique se o Java está instalado: `java -version`
+  - Se não tiver, baixe em: https://www.oracle.com/java/technologies/downloads/
+
+### Passo 1: Clonar o Repositório
+
+**Opção 1 - Usando Git:**
+
+```bash
+git clone https://github.com/Pacoletta/Sistema-de-Estacionamento.git
+cd Sistema-de-Estacionamento
+```
+
+**Opção 2 - Baixar ZIP:**
+
+1. Clique no botão verde **Code** no GitHub
+2. Clique em **Download ZIP**
+3. Extraia o arquivo ZIP em uma pasta de sua preferência
+4. Abra o terminal/prompt na pasta extraída
+
 ## 🚀 Como Compilar e Executar
 
-### Compilar todos os arquivos:
+### Passo 2: Compilar o Projeto
+
 ```bash
 javac *.java
 ```
 
-### Executar o programa:
+### Passo 3: Executar o Sistema
+
 ```bash
+java Main
+```
+
+### Comandos Completos (Windows - PowerShell/CMD)
+
+```powershell
+# Navegar até a pasta do projeto
+cd caminho\para\Sistema-de-Estacionamento
+
+# Compilar
+javac *.java
+
+# Executar
+java Main
+```
+
+### Comandos Completos (Linux/Mac - Terminal)
+
+```bash
+# Navegar até a pasta do projeto
+cd caminho/para/Sistema-de-Estacionamento
+
+# Compilar
+javac *.java
+
+# Executar
 java Main
 ```
 
@@ -52,6 +104,7 @@ java Main
 ## 📊 Tipos de Vagas
 
 O sistema cria automaticamente diferentes tipos de vagas:
+
 - **Vagas 1-3**: Deficientes
 - **Vagas 4-6**: Idosos
 - **Vagas 7-20**: Comuns
@@ -75,4 +128,5 @@ O sistema cria automaticamente diferentes tipos de vagas:
 ## 👨‍💻 Autor
 
 Desenvolvido como trabalho acadêmico utilizando conceitos de Programação Orientada a Objetos e API java.time.
+
 # Sistema-de-Estacionamento

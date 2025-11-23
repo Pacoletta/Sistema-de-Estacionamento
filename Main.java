@@ -8,7 +8,7 @@ public class Main {
         Estacionamento estacionamento = new Estacionamento("Estacionamento Central", 20, 5.00);
         
         System.out.println("╔════════════════════════════════════════════╗");
-        System.out.println("║   SISTEMA DE GERENCIAMENTO DE ESTACIONAMENTO   ║");
+        System.out.println("║ SISTEMA DE GERENCIAMENTO DE ESTACIONAMENTO ║");
         System.out.println("╚════════════════════════════════════════════╝");
         System.out.println("Bem-vindo ao " + estacionamento.getNome());
         System.out.println("Tarifa: R$ " + String.format("%.2f", estacionamento.getTarifaPorHora()) + " por hora\n");
@@ -130,7 +130,7 @@ public class Main {
     
     private static void executarTestes(Estacionamento estacionamento) {
         System.out.println("╔════════════════════════════════════════════╗");
-        System.out.println("║          EXECUTANDO TESTES DE DEMONSTRAÇÃO          ║");
+        System.out.println("║ EXECUTANDO TESTES DE DEMONSTRAÇÃO          ║");
         System.out.println("╚════════════════════════════════════════════╝");
         System.out.println("\nEste modo demonstra o funcionamento do sistema com dados de exemplo.\n");
         

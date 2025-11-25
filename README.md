@@ -127,6 +127,6 @@ O sistema cria automaticamente diferentes tipos de vagas:
 
 ## 👨‍💻 Autor
 
-Desenvolvido como trabalho acadêmico utilizando conceitos de Programação Orientada a Objetos e API java.time.
+Desenvolvido como trabalho acadêmico
 
-# Sistema-de-Estacionamento
+

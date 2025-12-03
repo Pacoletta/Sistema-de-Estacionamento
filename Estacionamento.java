@@ -13,6 +13,7 @@ public class Estacionamento {
     private List<Ticket> tickets;
     private int contadorTickets;
     private double tarifaPorHora;
+    // Feita por AI
     private Queue<Veiculo> filaEspera; // Fila de espera quando estacionamento está cheio
     private Map<LocalDate, Double> arrecadacaoPorDia; // Total arrecadado por dia
 
@@ -131,7 +132,7 @@ public class Estacionamento {
         System.out.println("Tempo de permanência: " + ticket.calcularMinutosPermanencia() + " minutos (" + horas + " horas)");
         System.out.println("Valor a pagar: R$ " + String.format("%.2f", valor));
         
-        // Processa fila de espera - entrada automática do próximo da fila
+        // Feita por AI
         if (!filaEspera.isEmpty()) {
             System.out.println("\n Processando fila de espera...");
             Veiculo proximoVeiculo = filaEspera.poll(); // Remove o primeiro da fila
@@ -160,8 +161,7 @@ public class Estacionamento {
         }
     }
 
-    // Busca uma vaga adequada ao perfil do condutor
-    // Prioriza vagas específicas (deficiente, idoso) mas permite uso de vagas comuns se necessário
+    // Feita por AI
     private Vaga buscarVagaPorPerfil(String perfilCondutor) {
         // 1. Primeiro, tenta encontrar uma vaga do tipo específico
         for (Vaga vaga : vagas) {
@@ -194,9 +194,7 @@ public class Estacionamento {
         return null;
     }
 
-    // Calcula o valor a ser pago baseado no tipo de veículo
-    // Carro: primeira hora R$12,00 + R$8,00 por hora adicional
-    // Moto: primeira hora R$8,00 + R$5,00 por hora adicional
+    // Feita por AI
     private double calcularValor(double horas, String tipoVeiculo) {
         if (horas <= 0) return 0.0;
         

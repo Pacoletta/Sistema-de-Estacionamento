@@ -86,7 +86,7 @@ public class Main {
         
         kb.close();
     }
-    
+    // Feita por AI
     private static void exibirMenu() {
         System.out.println("\n┌────────────────────────────────────────┐");
         System.out.println("│           MENU PRINCIPAL               │");
@@ -144,7 +144,7 @@ public class Main {
         System.out.print("Digite a cor do veículo: ");
         String cor = scanner.nextLine();
         
-        // Pergunta se quer informar data manualmente
+        // Feita por AI
         System.out.println("\n--- Horário de Entrada ---");
         System.out.println("  1 - Usar data/hora ATUAL (automático)");
         System.out.println("  2 - Informar DATA manualmente (horário atual)");

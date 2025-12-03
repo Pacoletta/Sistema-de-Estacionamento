@@ -59,7 +59,7 @@ public class Ticket {
         this.ativo = ativo;
     }
 
-    // Cálculo do tempo de permanência em minutos
+    // Feita por AI
     public long calcularMinutosPermanencia() {
         if (horaSaida != null) {
             return ChronoUnit.MINUTES.between(horaEntrada, horaSaida);
